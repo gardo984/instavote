@@ -1,0 +1,18 @@
+kind: Service
+metadata:
+  labels:
+    app: vote
+    kustomize.toolkit.fluxcd.io/name: vote
+    kustomize.toolkit.fluxcd.io/namespace: flux-system
+  name: vote
+  namespace: instavote
+spec:
+  ports:
+  - port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: vote
+  type: clusterip
+status:
+  loadBalancer: {}

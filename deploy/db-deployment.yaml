@@ -22,5 +22,12 @@ spec:
         name: postgres
         ports:
         - containerPort: 5432
+        env:
+        - name: POSTGRESQL_USERNAME
+          value: "root"
+        - name: POSTGRESQL_PASSWORD
+          value: "123456"
+        - name: POSTGRESQL_DATABASE
+          value: "vote"
         resources: {}
 status: {}
