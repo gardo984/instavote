@@ -38,7 +38,7 @@ Note
 
 The voting application only accepts one vote per client. It does not register votes if a vote has already been submitted from a client.
 
-#### Docker Images
+### Docker Images
 
 The available images for containerization are:
 - schoolofdevops/vote:latest
@@ -46,3 +46,11 @@ The available images for containerization are:
 - schoolofdevops/worker:latest
 - postgres:9.4
 - redis:alpine
+
+### K8s Visualizer
+
+- Repo: https://github.com/schoolofdevops/kube-ops-view
+```sh
+git clone -v https://github.com/schoolofdevops/kube-ops-view
+kubectl apply -f kube-ops-view/deploy/
+```
