@@ -41,11 +41,11 @@ The voting application only accepts one vote per client. It does not register vo
 ### Docker Images
 
 The available images for containerization are:
-- schoolofdevops/vote:latest
-- schoolofdevops/vote-result:latest
+- schoolofdevops/vote:latest (port: 80, node-port: 30300)
+- schoolofdevops/vote-result:latest (port: 80, node-port:30400)
 - schoolofdevops/worker:latest
-- postgres:9.4
-- redis:alpine
+- postgres:9.4 (port: 5432)
+- redis:alpine (port: 6379)
 
 ### K8s Visualizer
 
