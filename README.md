@@ -54,3 +54,11 @@ The available images for containerization are:
 git clone -v https://github.com/schoolofdevops/kube-ops-view
 kubectl apply -f kube-ops-view/deploy/
 ```
+- Repo: https://kubernetes.io/docs/tasks/access-application-cluster/web-ui-dashboard/
+	- Run the following:
+	```sh
+	kubectl -n kubernetes-dashboard port-forward svc/kubernetes-dashboard-kong-proxy 8443:443 &
+	kubectl -n kubernetes-dashboard create token admin-user
+	```
+	- Connect to https://localhost:8443
+	
