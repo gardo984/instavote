@@ -1,0 +1,26 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  creationTimestamp: null
+  labels:
+    app: vote-result
+  name: vote-result
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      app: vote-result
+  strategy: {}
+  template:
+    metadata:
+      creationTimestamp: null
+      labels:
+        app: vote-result
+    spec:
+      containers:
+      - image: schoolofdevops/vote-result:latest
+        name: vote-result
+        ports:
+        - containerPort: 80
+        resources: {}
+status: {}

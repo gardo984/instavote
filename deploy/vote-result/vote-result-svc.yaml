@@ -1,0 +1,19 @@
+apiVersion: v1
+kind: Service
+metadata:
+  creationTimestamp: null
+  labels:
+    app: vote-result
+  name: vote-result
+spec:
+  ports:
+  - name: "80"
+    nodePort: 30400
+    port: 80
+    protocol: TCP
+    targetPort: 80
+  selector:
+    app: vote-result
+  type: NodePort
+status:
+  loadBalancer: {}
