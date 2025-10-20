@@ -37,3 +37,12 @@ Note
 ----
 
 The voting application only accepts one vote per client. It does not register votes if a vote has already been submitted from a client.
+
+#### Docker Images
+
+The available images for containerization are:
+- schoolofdevops/vote:latest
+- schoolofdevops/vote-result:latest
+- schoolofdevops/worker:latest
+- postgres:9.4
+- redis:alpine
